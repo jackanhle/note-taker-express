@@ -1,6 +1,6 @@
 const util = require('util');
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid'); // Newest update
+const { v4: uuidv4 } = require('uuid'); 
 
 
 const readNote = util.promisify(fs.readFile);
@@ -35,14 +35,13 @@ class Save {
         // Use UUID package to add unique IDs
         const newNote = { title, text, id: uuidv4() };
 
-        // Retrieve Notes, add the new note, update notes
         return this.retrieveNotes()
             .then(notes => [...notes, newNote])
             .then(updatedNotes => this.write(updatedNotes))
             .then(() => newNote);
     }
 
-    // Delete Note function - BONUS
+    
     deleteNote(id) {
         return this.retrieveNotes()
             .then(notes => notes.filter(note => note.id !== id))
