@@ -32,7 +32,7 @@ class Save {
         if (!title || !text) {
             throw new Error('Both title and text can not be blank');
         }
-        // Use UUID package to add unique IDs
+       
         const newNote = { title, text, id: uuidv4() };
 
         return this.retrieveNotes()
