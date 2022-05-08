@@ -1,0 +1,18 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "An application to write and save note with Express.js back end and will save and retrieve note data from JSON file.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anh Le",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "inquirer": "^8.2.4",
+    "uuid": "^8.3.2",
+    "v1": "^1.0.0",
+    "v4": "^0.0.1"
+  }
+}
